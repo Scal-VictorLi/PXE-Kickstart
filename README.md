@@ -2,17 +2,17 @@ PXE+Kickstart自动化安装
 =================================================
 步骤解读：
 ---------------------------------------------------------------------------------------
-1、服务器/PC网卡支持PXE，自带有DHCP及TFPT客户端；
-2、首先开机后网卡作为DHCP客户端向DHCP服务器请求IP地址，DHCP服务器返回IP地址及PXE文件位置（TFTP中存放的pxelinux.0文件）；
-3、网卡作为TFTP客户端向TFTP服务器请求下载pxelinux.0；
-4、本地执行pxelinux.0；
-5、向TFTP服务器请求并下载配置文件pexlinux.cfg；
-6、本地读取配置文件；
-7、向TFTP请求并下载vmlinuz文件；
-8、向TFTP请求并下载initrd.img文件；
-9、启动linux内核；
-10、向http服务器请求下载kickstart文件；
-11、自动安装系统；
+    1、服务器/PC网卡支持PXE，自带有DHCP及TFPT客户端；
+    2、首先开机后网卡作为DHCP客户端向DHCP服务器请求IP地址，DHCP服务器返回IP地址及PXE文件位置（TFTP中存放的pxelinux.0文件）；
+    3、网卡作为TFTP客户端向TFTP服务器请求下载pxelinux.0；
+    4、本地执行pxelinux.0；
+    5、向TFTP服务器请求并下载配置文件pexlinux.cfg；
+    6、本地读取配置文件；
+    7、向TFTP请求并下载vmlinuz文件；
+    8、向TFTP请求并下载initrd.img文件；
+    9、启动linux内核；
+    10、向http服务器请求下载kickstart文件；
+    11、自动安装系统；
 *************************************************************************************
 1、yum install httpd createrepo   
 用于创建提供本地yum源
